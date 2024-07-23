@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Referencias das imagens dos Produtos:
+<a href="https://br.freepik.com/fotos-gratis/frente-de-sueter-rosa_13237329.htm#fromView=search&page=1&position=27&uuid=4ba0e65e-3613-4d1c-bd3b-3688100ffed0">Imagem de Vectonauta no Freepik</a>
+<a href="https://br.freepik.com/fotos-gratis/camiseta-azul_13237310.htm#from_view=detail_alsolike">Imagem de Vectonauta no Freepik</a>
+<a href="https://www.freepik.com/free-photo/black-back-sweater_13410570.htm#from_view=detail_alsolike">Image by Vectonauta on Freepik</a>
+<a href="https://www.freepik.com/free-psd/isolated-black-t-shirt-opened_18218947.htm#fromView=search&page=3&position=24&uuid=44277d67-830d-49ce-9d71-c98c0d2ecfe4">Image by Vectonauta on Freepik</a>
+<a href="https://www.freepik.com/free-psd/isolated-white-t-shirt-with-hanger_18219090.htm#from_view=detail_alsolike">Image by Vectonauta on Freepik</a>
+
+Referencias dos icones:
+
+<a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/pinterest" title="pinterest icons">Pinterest icons created by Dave Gandy - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/discord" title="discord icons">Discord icons created by Laisa Islam Ani - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Freepik - Flaticon</a>
+*/  
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap ;
+    height: 100px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo{
+    flex: 20%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.logo h1{
+    font-family: "Poppins", sans-serif;
+    color: rgb(59, 34, 91);
+    font-size: 33px;
+}
+
+.menu{
+    flex: 70%;
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 20px 15px;
+}
+
+.menu a:hover{
+    color: rgb(252, 97, 51);
+    border-top: 4px solid rgb(252, 97, 51);
+}
+
+
+.botao_contato{
+    margin-right: 10%;
+}
+
+.espaco-nav{
+    height: 100px;
+    background: white; 
+}
+
+
+/* Banner */
+.header{
+    height: 550px;
+    background-image: url(../img/banner.png);
+    /*background max-width: 100%;*/
+    background-size: cover;
+    background-position: center;
+    /*
+    display: flex;
+    flex-flow: row wrap;*/
+    margin-bottom: 0;
+}
+
+.botao-saiba-mais{
+    border: none;
+    background: rgb(252, 97, 51);
+    color: white;
+    padding: 30px 40px;
+    border-radius: 9999px;
+    font-size: 27px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    /*transform: ;*/
+    
+    transform: translate(+100%, +350%);
+
+    /*
+    margin-top: 27%;
+    margin-left: 20%;
+    */
+    /*
+    margin-toptransform: translateX(-50%);: 0;
+    margin-left: 10%;*/
+
+
+}
+
+.botao-saiba-mais:hover{
+    background: rgb(241, 81, 32);
+    color: rgb(255, 255, 255);
+    padding: 30px 40px;
+}
+
+.page-intern-content{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+
+
+/*
+.div-banner{
+    background-color: blue;
+    background-image: url(../img/banner.png);
+    background-size: cover;
+    height: 600px;
+}*/
+
+
+/* Main */
+
+main{
+    background-color: rgba(241, 228, 241, 0.733);
+    
+}
+
+
+.div-produtos-filtro{
+    border-radius: 9px;
+    background-color: rgb(225, 211, 225);
+    height: 150px;
+    margin: 5%;
+    margin-bottom: 0;
+    margin-top: 2%;
+}
+
+.div-produtos-filtro-info{
+    margin-left: 10%;
+}
+
+.botao-categorias{
+    border: none;
+    background: rgb(194, 180, 194);
+    color: black;
+    padding: 20px 20px;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 1%;
+    font-size: 12px;
+    margin: 0;
+}
+
+.botao-categorias:hover{
+    background: rgb(184, 170, 184);
+}
+
+.cols{
+    display: grid;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+}
+
+.cols-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.cols-3 img{
+    max-width: 100%;
+}
+
+.section-title{
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 1px;
+}
+
+.sublinhado-titulo-produtos{
+    width: 100px;
+    height: 5px;
+    background: rgb(252, 97, 51);
+    border-radius: 9999px;
+    margin: 8px auto 0 auto;
+}
+
+
+.produto{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-nome{
+    /*font-weight: 600;*/
+    /*font-size: 500;*/
+    font-size: 1.2rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.produto-descricao{
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+
+.nota{
+    color: rgb(252, 97, 51);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.produto-desconto{
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.produto-preco{
+    font-weight: 600;
+    margin-top: 0.4rem;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.botao-detalhes{
+    background: rgb(252, 97, 51);
+    color: white;
+    padding: 20px 20px;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.botao-detalhes:hover{
+    background: rgb(241, 81, 32);
+    color: rgb(255, 255, 255);
+    padding: 20px 20px;
+}
+
+/* Media Querie */
+
+@media (max-width: 1800px){
+    .header{
+        background-position-y: 60%;
+    }
+    .botao-saiba-mais{
+        transform: translate(+100%, +400%);
+    }
+}
+
+@media (max-width: 1250px){
+    .botao-saiba-mais{
+        transform: translate(+100%, +400%);
+    }
+}
+
+
+@media (max-width: 990px){
+    .botao-saiba-mais{
+        transform: translate(+100%, +650%);
+        font-size: 25px;
+        padding: 15px 15px;
+    }
+}
+
+@media (max-width: 900px){
+    .header {
+        height: 30vh; /* Ajuste a altura para dispositivos menores, se necessário */
+    }
+
+    .botao-saiba-mais{
+        transform: translate(+100%, +275%);
+        font-size: 18px;
+        padding: 15px 15px;
+    }
+}
+
+@media (max-width: 800px){
+    
+    .navbar{
+        /*position: relative;*/
+        height: 20%;
+        /*height: 200px;*/
+    }
+
+    /*
+    .menu{
+        display: none;
+    }*/
+
+    
+    .menu{
+        display: flex;
+    }
+
+    .logo{
+        margin: 0;
+        text-align: center;
+        height: 30px;
+    }
+
+    .cols-3{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produto-nome, .produto-preco, .nota, .produto-desconto, .produto-descricao{
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+
+    .botao-detalhes{
+        padding-top: 5px;
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+
+    .header-sobre{
+        background-color: rgba(241, 228, 241, 0.733);
+        color: black;
+    }
+}
+
+@media (max-width: 600px){
+    .botao-saiba-mais{
+        transform: translate(+50%, +400%);
+        transform: translate(+100%, +275%);
+        font-size: 18px;
+        padding: 15px 15px;
+    }
+}
+    
+
+@media (max-width: 410px){
+    .botao-categorias{
+        font-size: 10px;
+    }
+
+    .botao-saiba-mais{
+        transform: translate(+100%, +275%);
+        font-size: 18px;
+        padding: 15px 15px;
+    }
+}
+
+
+@media screen and (max-width: 1330px) {
+    /*.form {
+        width: 100%;
+    }*/
+}
+
+@media screen and (max-width: 1064px) {
+    /*
+    .form {
+        width: 90%;
+        height: auto;
+    }*/
+    .input-group {
+        flex-direction:row;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+
+}
+
+/* Footer */
+
+footer{
+    margin-top: 100px;
+    height: 300px;
+    background-image:linear-gradient(180deg, #180F4A, #090422, black);
+    text-align: center;
+    border-top:5px solid rgb(252, 97, 51);
+    margin-top: 0;
+}
+
+.logo-rodape{
+    padding: 40px;
+}
+
+.loja-nome{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 34px;
+}
+
+
+/* Contato */
+
+.header-contato{
+    background-color: rgba(241, 228, 241, 0.733);
+    color: black;
+    height: 600px;
+}
+
+.div-contato-info{
+    margin-left: 10%;
+}
+
+.header-sobre{
+    background-color: rgba(241, 228, 241, 0.733);
+    color: black;
+    height: 2000px;
+
+}
+
+.div-sobre{
+    margin-left: 10%;
+    margin-right: 20%;
+    text-align: justify;
+}
+
+
+/* Páginas de produtos*/
+
+.header-produto{
+    background-color: rgba(241, 228, 241, 0.733);
+    color: black;
+    height: 1500px;
+}
+
+.div-produtos-individuais{
+    margin-left: 2%;
+    margin-right: 4%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.imagem{
+    max-width: 100%;
+}
+
+
+
+.produto-infos{
+    flex: 4;
+    margin-left: 4%;
+    /*background-color: blue;*/
+}
+
+
+
+
+
+/* Radio buton Cores*/
+.color-option {
+    display: inline-block;
+    margin: 5px;
+}
+
+.color-option input[type="radio"] {
+    display: none;
+}
+
+.color-option label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.color-option input[type="radio"]:checked + label {
+    box-shadow: 0 0 0 2px #000000;
+}
+
+.color-option-black label {
+    background-color: black;
+}
+
+.color-option-gray label {
+    background-color: gray;
+}
+
+.color-option-white label {
+    background-color: white;
+}
+
+.color-option-blue label {
+    background-color: rgb(32, 80, 139);
+}
+
+.color-option-pink label {
+    background-color: rgb(230, 86, 108);
+}
+
+
+/* Quantidade de produtos*/
+.quantidade-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantidade-container label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.quantidade-input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.quantidade-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Botão de adicionar ao carrinho */
+
+.div-botao-comprar{
+    /*
+    margin-left: 2%;
+    margin-right: 4%;*/
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.botao-comprar{
+    background: rgb(252, 97, 51);
+    /*border-color: black;*/
+    border: none;
+    color: white;
+    padding: 20px 20px;
+    font-size: 17px;
+    font-weight: 650;
+    border-radius: 10px;
+    cursor: pointer;
+    /*text-decoration: none;*/
+    text-align: center;
+    margin-top: 0;
+    margin-left: 10%;
+}
+
+.botao-comprar:hover{
+    background: rgb(241, 81, 32);
+}
+
+
+/* Página de compras / dados / endereço */
+
+
+
+
+.header-compra{
+    background-color: rgba(241, 228, 241, 0.733);
+    color: black;
+    height: 1100px;
+}
+
+/*
+.div-dados{
+    /*margin-left: 10%;*/
+    /*
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+}*/
+
+
+.form{
+    margin-left: 20%;
+    margin-right: 20%;
+    /*margin-top: 1px;*/
+    /*width: 50%;*/
+    height: 500px;
+
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #6c63ff
+}
+
+.input-box label{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder{
+    color: #000000be;
+}
+
+.botao-finalizar{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: rgb(252, 97, 51);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+}
+
+.botao-finalizar:hover{
+    background-color: rgb(241, 81, 32);
+}

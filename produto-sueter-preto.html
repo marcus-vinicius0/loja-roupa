@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de roupas">
+    <meta name="keywords" content="Loja de roupas, Blusas, Camisas">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Suéter Preto</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>VISTA</h1>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="contato.html" class="botao_contato">Contato</a>
+        </div>
+    </nav>
+    <div class="espaco-nav"></div>
+    <header class="header-produto">
+        <br><br><br><br><br><br>
+        
+        <div class="div-produtos-individuais">
+            
+            
+            <div class="produto-imagem">
+                <img src="img/black-back-sweater.jpg" alt="SUÉTER PRETO" width="700" class="imagem">
+            </div>
+            <div class="produto-infos">
+                <h2 style="font-size: 37px;">SUÉTER PRETO</h2>
+                <p>Suéter Básico Tech Simples com Manga Longa</p>
+                <h3>Detalhes do produto</h3>
+                <p><b>Composição do material:</b> 100% algodão</p>
+                <p><b>Instruções de cuidados:</b> Lavagem à máquina</p>
+                
+                <form action="compra.html">
+                    <b>Tamanho:</b>
+                    <select required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="p">P</option>
+                        <option value="m">M</option>
+                        <option value="g">G</option>
+                    </select>
+                    <br><br>
+                    <b>Cor:</b>
+                    <div class="color-options">
+                        <div class="color-option color-option-black">
+                            <input type="radio" id="color-black" name="product-color" value="black">
+                            <label for="color-black"></label>
+                        </div>
+                        <div class="color-option color-option-gray">
+                            <input type="radio" id="color-gray" name="product-color" value="gray">
+                            <label for="color-gray"></label>
+                        </div>
+                        <div class="color-option color-option-white">
+                            <input type="radio" id="color-white" name="product-color" value="white">
+                            <label for="color-white"></label>
+                        </div>
+                        <div class="color-option color-option-pink">
+                            <input type="radio" id="color-pink" name="product-color" value="pink">
+                            <label for="color-pink"></label>
+                        </div>
+                    </div>
+
+                    <div class="quantidade-container">
+                        <label for="produto-quantidade">Quantidade:</label>
+                        <input type="number" id="produto-quantidade" class="quantidade-input" name="produto-quantidade" min="1" value="1">
+                    </div>
+
+                    <p>De: <s>89,90</s></p>
+                    <div class="div-botao-comprar">
+                        <p style="font-size: 30px; margin-top: 0;"><b>Por: R$ 69,90</b></p>
+                        
+                        <input type="submit" value="Comprar" class="botao-comprar">
+                    </div>
+
+                    
+
+                </form>
+                
+                    
+                
+                
+            </div>
+
+        </div>
+    </header>
+
+    <footer>
+        <div class="logo-rodape">
+            <h3 class="loja-nome">VISTA
+            </h3>
+            <b style="color: white;">© 2024 Todos os direitos reservados.</b>
+        </div>
+    </footer>  
+    
+
+</body>
+</html>
